@@ -4,10 +4,10 @@
  * Stack: Last in, first out data sctructure.
  *
  * Methods:
- * 	sPush(n) adds n to the top of the stack
- * 	sPop() removes the top item on the stack
- * 	sPeek() returns the top item on the stack
- * 	sMin() returns the minimum item on the stack
+ * 	Push(n) adds n to the top of the stack
+ * 	Pop() removes the top item on the stack
+ * 	Peek() returns the top item on the stack
+ * 	Min() returns the minimum item on the stack
  * */
 var Stack = function (){
 	this.data = new Array(); //stores the data
