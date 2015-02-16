@@ -14,9 +14,13 @@ var Stack = function (){
 	this.mins = new Array(); //keeps track of the latest min
 }
 
+Array.prototype.last = function(){
+	return this[this.length - 1];
+}
+
 Stack.prototype.push = function(n){
 	//Checks if n is a candidate to be a min
-	if(this.mins.length === 0 || n <= this.mins[this.mins.length - 1]){
+	if(this.mins.length === 0 || n <= this.mins.last()){
 		//if it is, hang on to it at the top of the min stack
 		this.mins.push(n);
 	}
@@ -26,7 +30,7 @@ Stack.prototype.push = function(n){
 
 Stack.prototype.pop = function(){
 	//Before popping it off the stack, check if it was previously a min
-	if(this.data[this.data.length - 1] === this.mins[this.mins.length - 1])
+	if(this.data.last() === this.mins.last())
 		this.mins.pop();
 	//Utilizes Array.prototype.pop()
 	this.data.pop();
@@ -34,12 +38,12 @@ Stack.prototype.pop = function(){
 
 Stack.prototype.peek = function(){
 	//Allows the caller to see the top of the stack
-	return this.data[this.data.length - 1];
+	return this.data.last();
 }
 
 Stack.prototype.min = function(){
 	//Returns the smallest integer in the stack
-	return this.mins[this.mins.length - 1];
+	return this.mins.last();
 }
 
 module.exports = Stack;
