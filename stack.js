@@ -14,8 +14,14 @@ var Stack = function (){
 	this.mins = new Array(); //keeps track of the latest min
 }
 
+//Helper function to access the last element in an array
 Array.prototype.last = function(){
 	return this[this.length - 1];
+}
+
+//Helps the caller determine if they have an empty stack
+Stack.prototype.isEmpty = function(){
+	return (this.data.length === 0);
 }
 
 Stack.prototype.push = function(n){

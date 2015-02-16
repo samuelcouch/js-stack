@@ -4,6 +4,12 @@ var Stack = require('../stack.js');
 describe('Stack', function(){
     var s1 = new Stack();
 
+    describe('isEmpty()', function(){
+        it('should confirm a stack was created, and it is empty', function(){
+            assert.equal(true, s1.isEmpty());
+        });
+    });
+
     describe('push and peek', function(){
         it('should push 4 onto the stack, and return 4', function(){
             s1.push(4);
