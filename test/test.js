@@ -43,15 +43,17 @@ describe('Stack', function(){
             assert.equal(10, s1.peek());
         });
     });
-    
+
     describe('min and pop', function(){
         it('should return 1 as the min', function(){
             assert.equal(1, s1.min());
         });
-        it('should pop 1 and 10 off and return 2 as the min', function(){
-            s1.pop();
-            s1.pop();
-            assert.equal(2, s1.min());
+        it('should pop 1 and 10 off the stack', function(){
+            assert.equal(10, s1.pop());
+            assert.equal(1, s1.pop());
         });
+        it('should ruturn 2 as the new min', function(){
+            assert.equal(2, s1.min());
+        })
     });
 });
