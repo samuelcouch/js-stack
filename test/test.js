@@ -12,8 +12,11 @@ describe('Stack', function(){
 
         it('should push [3, 2, 1, 10] on to the stack', function(){
             s1.push(3);
+            assert.equal(3, s1.peek());
             s1.push(2);
+            assert.equal(2, s1.peek());
             s1.push(1);
+            assert.equal(1, s1.peek());
             s1.push(10);
             assert.equal(10, s1.peek());
         });

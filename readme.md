@@ -8,15 +8,15 @@ A simple demonstration of a Stack data structure written in javascript.
 * `mocha` to run the tests
 
 #### Implementation:
-* push(num)
+* `push(num)`
   * O(1) 
   * Adds a new integer to the top of the stack
-* pop() 
+* `pop()`
   * O(1)
   * Removes the top item on the stack
-* peek()
+* `peek()`
   * O(1)
   * Returns the top item on the stack
-* min()
+* `min()`
   * O(1)
   * Returns the smallest integer in the stack
