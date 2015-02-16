@@ -15,23 +15,30 @@ var Stack = function (){
 }
 
 Stack.prototype.push = function(n){
+	//Checks if n is a candidate to be a min
 	if(this.mins.length === 0 || n <= this.mins[this.mins.length - 1]){
+		//if it is, hang on to it at the top of the min stack
 		this.mins.push(n);
 	}
+	//utiluzes Array.prototype.push()
 	this.data.push(n);
 }
 
 Stack.prototype.pop = function(){
+	//Before popping it off the stack, check if it was previously a min
 	if(this.data[this.data.length - 1] === this.mins[this.mins.length - 1])
 		this.mins.pop();
+	//Utilizes Array.prototype.pop()
 	this.data.pop();
 }
 
 Stack.prototype.peek = function(){
+	//Allows the caller to see the top of the stack
 	return this.data[this.data.length - 1];
 }
 
 Stack.prototype.min = function(){
+	//Returns the smallest integer in the stack
 	return this.mins[this.mins.length - 1];
 }
 
