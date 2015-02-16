@@ -10,23 +10,40 @@ describe('Stack', function(){
         });
     });
 
-    describe('push and peek', function(){
-        it('should push 4 onto the stack, and return 4', function(){
-            s1.push(4);
-            assert.equal(4, s1.peek());
+    describe('push', function(){
+        it('should push 4 onto the stack', function(){
+            assert.deepEqual(s1.push(4), {
+                                            data: [4], 
+                                            mins: [4] 
+            });
         });
 
         it('should push [3, 2, 1, 10] on to the stack', function(){
-            s1.push(3);
-            assert.equal(3, s1.peek());
-            s1.push(2);
-            assert.equal(2, s1.peek());
-            s1.push(1);
-            assert.equal(1, s1.peek());
-            s1.push(10);
+            assert.deepEqual(s1.push(3), {
+                                            data: [4, 3], 
+                                            mins: [4, 3] 
+            });
+            assert.deepEqual(s1.push(2), {
+                                            data: [4, 3, 2], 
+                                            mins: [4, 3, 2] 
+            });
+            assert.deepEqual(s1.push(1), {
+                                            data: [4, 3, 2, 1], 
+                                            mins: [4, 3, 2, 1] 
+            });
+            assert.deepEqual(s1.push(10), {
+                                            data: [4, 3, 2, 1, 10], 
+                                            mins: [4, 3, 2, 1] 
+            });
+        });
+    });
+
+    describe('peek', function(){
+        it('should return 10', function(){
             assert.equal(10, s1.peek());
         });
     });
+    
     describe('min and pop', function(){
         it('should return 1 as the min', function(){
             assert.equal(1, s1.min());

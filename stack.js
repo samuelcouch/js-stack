@@ -32,6 +32,7 @@ Stack.prototype.push = function(n){
 	}
 	//utiluzes Array.prototype.push()
 	this.data.push(n);
+	return this
 }
 
 Stack.prototype.pop = function(){
@@ -39,7 +40,7 @@ Stack.prototype.pop = function(){
 	if(this.data.last() === this.mins.last())
 		this.mins.pop();
 	//Utilizes Array.prototype.pop()
-	this.data.pop();
+	return this.data.pop();
 }
 
 Stack.prototype.peek = function(){
