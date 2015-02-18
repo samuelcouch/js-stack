@@ -10,7 +10,7 @@ describe('Stack', function(){
         });
     });
 
-    describe('push', function(){
+    describe('push()', function(){
         it('should push 4 onto the stack', function(){
             assert.deepEqual(s1.push(4), {
                                             data: [4], 
@@ -38,13 +38,13 @@ describe('Stack', function(){
         });
     });
 
-    describe('peek', function(){
+    describe('peek()', function(){
         it('should return 10', function(){
             assert.equal(10, s1.peek());
         });
     });
 
-    describe('min and pop', function(){
+    describe('min() and pop()', function(){
         it('should return 1 as the min', function(){
             assert.equal(1, s1.min());
         });
