@@ -1,7 +1,7 @@
 JS Stack Implementation
 ========================
 
-A simple demonstration of a Stack data structure written in javascript.
+A simple demonstration of a Stack data structure written in javascript. Written as a explain what a stack is and how they function -- the tests show the full gamut of functionality.
 
 #### Usage/Test
 * `npm install`
