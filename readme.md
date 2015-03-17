@@ -7,6 +7,21 @@ A simple demonstration of a Stack data structure written in javascript. Written 
 * `npm install`
 * `mocha` to run the tests
 
+```
+var Stack = ('stack.js');
+
+var myStack = new Stack();
+
+myStack.isEmpty(); // => true
+myStack.push(5);
+myStack.peek(); // => 5
+myStack.push(1);
+myStack.min(); // => 1
+myStack.pop();
+myStack.peek(); // => 5
+myStack.min(); // => 5
+```
+
 #### Implementation:
 * `push(num)`
   * O(1) 
